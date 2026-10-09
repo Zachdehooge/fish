@@ -31,8 +31,6 @@ if [[ $d != "$(realpath -m "$config/fish")" ]]; then
     fi
     link "$d" "$config/fish"
 fi
-link "$d/omf/matrix" "$config/omf/themes/matrix"
-
 if [[ ! -f $omf_path/init.fish ]]; then
     command -v curl >/dev/null || { echo "curl is needed to install oh-my-fish" >&2; exit 1; }
     echo "oh-my-fish not found, installing it"
@@ -42,5 +40,11 @@ if [[ ! -f $omf_path/init.fish ]]; then
     fish "$tmp" --noninteractive --yes
 fi
 
+# omf only treats themes under $OMF_PATH/themes as installed; `omf theme matrix`
+# refuses one that is only in ~/.config/omf/themes.
+link "$d/omf/matrix" "$omf_path/themes/matrix"
+# Drop the link older versions of this script made, so conf.d isn't sourced twice.
+[[ ! -L $config/omf/themes/matrix ]] || rm "$config/omf/themes/matrix"
+
 fish -c 'omf theme matrix'
-echo "matrix theme set; open a new fish shell to see it"
+echo "matrix theme set; open a new fish shell (or run: exec fish) to see it"
