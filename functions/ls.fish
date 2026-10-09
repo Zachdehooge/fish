@@ -1,4 +1,3 @@
-function ls --wraps='eza -la' --description 'alias ls=eza -la'
-  eza -la $argv
-        
+function ls --description 'alias ls ls -la'
+    command ls -la $argv
 end

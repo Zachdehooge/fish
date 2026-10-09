@@ -1,0 +1,36 @@
+# name: Matrix
+# Green-on-black Matrix palette.
+
+# preferred_background: 000000
+fish_color_normal d0d8d0
+fish_color_command 61afef
+fish_color_keyword 00ff41 --bold
+fish_color_param d0d8d0
+fish_color_option 7dffa0
+fish_color_quote e6db74
+fish_color_redirection ffa066
+fish_color_end 159a38
+fish_color_operator 8b949e
+fish_color_escape ffa066
+fish_color_error ff3b3b --bold
+fish_color_comment 6e7681 --italics
+fish_color_autosuggestion 0b6b26
+fish_color_valid_path --underline
+fish_color_cwd 00ff41
+fish_color_cwd_root ff3b3b
+fish_color_user 20c84a
+fish_color_host 159a38
+fish_color_host_remote ffb000
+fish_color_status ff3b3b
+fish_color_cancel -r
+fish_color_history_current --bold
+fish_color_selection e0ffe8 --background=063d16 --bold
+fish_color_search_match 000000 --background=7dffa0 --bold
+fish_pager_color_prefix 00ff41 --bold --underline
+fish_pager_color_completion d0d8d0
+fish_pager_color_description 6e7681
+fish_pager_color_progress 000000 --background=159a38
+fish_pager_color_selected_background --background=063d16
+fish_pager_color_selected_prefix 00ff41 --bold --underline
+fish_pager_color_selected_completion e0ffe8
+fish_pager_color_selected_description 7dffa0
